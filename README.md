@@ -3,11 +3,11 @@
 I'm a 3rd-year B.Tech Computer Science student at KL University. I'm passionate about software development and problem-solving. Here's a little bit about me:
 
 - 🎓 **Education:** Currently pursuing a B.Tech in Computer Science at KL University.
-- 💻 **Experience:** I'm a full-stack developer at an intermediate level. I enjoy working on both front-end and back-end aspects of web applications.
+- 💻 **Experience:** I'm a full-stack developer at an intermediate level. I enjoy working on both the front-end and back-end aspects of web applications.
 - 🚀 **Skills:** HTML, CSS, JavaScript, React, Node.js, Express.js.
 - 💡 **Interests:** I'm enthusiastic about learning new technologies and applying them to real-world projects.
 - 🧠 **Problem Solving:** I love solving problems, and I often practice my problem-solving skills using Java.
-- 📫 **Contact:** Feel free to reach out to me via email at your@email.com.
+- 📫 **Contact:** Feel free to reach out to me via email at hemanthchoudary4@email.com.
 
 ## Projects
 

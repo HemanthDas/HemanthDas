@@ -40,17 +40,24 @@ const About = () => {
         <div className="item item2">
           <h4>Hello!</h4>
           <p>
-            My self <strong>V.Hemanth Das</strong>, I pursuing my Bachelor of
-            thechknowloedgy in computer science and engineering Lorem ipsum
-            dolor sit amet consectetur adipisicing elit. Eaque voluptate,
-            doloribus atque sit illo magnam aspernatur officiis rerum reiciendis
-            saepe aliquid nisi dolorum vitae ab? Laboriosam voluptatem earum
-            placeat provident.<br></br>
+            Greetings! I am <strong>V. Hemanth Das</strong>, currently a
+            dedicated student at KL University, pursuing my 3rd year of
+            Bachelor&apos;s in Computer Science and Engineering (CSE). My
+            journey in the world of technology has been nothing short of
+            exhilarating.
             <br></br>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi
-            doloremque provident libero culpa quos! Dolores repellat, beatae,
-            optio quia blanditiis odit aliquam nisi voluptas dolore, quisquam
-            eum. Nihil, inventore ad?
+            <br></br>
+            As an intermediate-level full stack developer, I have had the
+            privilege to explore both front-end and back-end development,
+            immersing myself in the art of crafting seamless and dynamic user
+            experiences. The world of coding, with its logical puzzles and
+            endless possibilities, has truly become my playground.
+            <br></br>
+            <br></br>
+            Java is my language of choice, and I thrive on solving intricate
+            programming challenges. Whether it's building efficient algorithms
+            or developing robust applications, I find myself in a state of flow
+            when I'm deeply engaged in problem-solving with Java.
           </p>
         </div>
       </div>

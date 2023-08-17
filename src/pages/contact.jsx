@@ -31,7 +31,7 @@ const Contact = () => {
     <div className={"contact " + (isClicked ? "set" : "no")}>
       <button
         className="btn"
-        style={{ fontSize: "1.3rem" }}
+        style={{ fontSize: "2.5em" }}
         onClick={() => {
           setIsClicked(!isClicked);
         }}

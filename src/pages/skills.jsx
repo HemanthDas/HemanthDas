@@ -35,40 +35,40 @@ const Skills = () => {
   }, []);
   return (
     <div className="skills" ref={ref}>
-      <label>Technical Skills</label>
+      <label style={{marginBottom:"1em"}}>Technical Skills</label>
       <div className="top">
         <Progress
           name="Java"
           value={85}
-          width={widht / 2}
+          width={widht / 2+100}
           visible={isVisible}
         />
         <Progress
           name="Full-Stack Web Development"
           value={90}
-          width={widht / 2}
+          width={widht / 2+100}
           visible={isVisible}
         />
         <Progress
           name="Git/GitHub"
           value={70}
-          width={widht / 2}
+          width={widht / 2+100}
           visible={isVisible}
         />
         <Progress
           name="Data Structures and Algorithms"
           value={80}
-          width={widht / 2}
+          width={widht / 2+100}
           visible={isVisible}
         />
         <Progress
           name="Problem Solving Using Java"
           value={80}
-          width={widht / 2}
+          width={widht / 2+100}
           visible={isVisible}
         />
       </div>
-      <label>Certificates</label>
+      <label style={{marginTop:"1em"}}>Certificates</label>
       <div className="bottom">
         <Card id={0} />
         <Card id={1} />

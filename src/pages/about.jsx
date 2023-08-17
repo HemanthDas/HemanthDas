@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import data from "../assets/images.json";
 const About = () => {
   const [isVisible, setVisible] = useState(false);
   const ref = useRef(null);
@@ -26,11 +27,12 @@ const About = () => {
       }
     };
   }, []);
+  const obj = data[5];
   return (
     <div className="about" ref={ref}>
       <div className={"box " + (isVisible && "anime")}>
         <div className="item item1">
-          <div className="dp"></div>
+          <div className="dp" style={{backgroundImage:`url(${obj.img})`}}></div>
         </div>
         <div className="item item2">
           <h4>Hello!</h4>

@@ -22,5 +22,13 @@
     "img": "images/blog.jpg",
     "title": "Blog Website",
     "url": "https://github.com/HemanthDas/All-Projects/tree/main/Dairy-Blog"
+  },
+  {
+    "id": 4,
+    "img": "images/fullbody.jpg"
+  },
+  {
+    "id": 5,
+    "img": "images/dp.jpg"
   }
 ]

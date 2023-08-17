@@ -2,7 +2,8 @@ html {
   font-size: 20px;
 }
 body {
-  background: url("images/fullbody.jpg") no-repeat;
+  /* background: url("images/fullbody.jpg") no-repeat; */
+  background-repeat: no-repeat;
   background-size: cover;
   /* background-color: black; */
   padding: 0px;
@@ -69,7 +70,7 @@ body {
 .dp {
   width: 25em;
   height: 25em;
-  background: url("images/dp.jpg");
+  /* background: url("images/dp.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }

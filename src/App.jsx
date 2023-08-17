@@ -10,12 +10,12 @@ function App() {
   const obj = images[4];
   useEffect(() => {
     document.body.style.backgroundImage = `url(${obj.img})`;
-    document.body.style.backgroundSize = 'cover';
-    document.body.style.backgroundRepeat = 'no-repeat';
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
     return () => {
-      document.body.style.backgroundImage = '';
-      document.body.style.backgroundSize = '';
-      document.body.style.backgroundRepeat = '';
+      document.body.style.backgroundImage = "";
+      document.body.style.backgroundSize = "";
+      document.body.style.backgroundRepeat = "";
     };
   }, [obj.img]);
   return (
@@ -30,6 +30,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

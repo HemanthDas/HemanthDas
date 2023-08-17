@@ -32,7 +32,10 @@ const About = () => {
     <div className="about" ref={ref}>
       <div className={"box " + (isVisible && "anime")}>
         <div className="item item1">
-          <div className="dp" style={{backgroundImage:`url(${obj.img})`}}></div>
+          <div
+            className="dp"
+            style={{ backgroundImage: `url(${obj.img})` }}
+          ></div>
         </div>
         <div className="item item2">
           <h4>Hello!</h4>

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 0,
+    "url": "images/redhat.png",
+    "title": "RedHat",
+    "link": "https://www.credly.com/badges/9e77a181-e1ca-4539-b49d-b082acc60cb4/public_url"
+  },
+  {
+    "id": 1,
+    "url": "images/aws.png",
+    "title": "AWS",
+    "link": "https://www.credly.com/badges/46455bcb-d097-4f2c-8a0d-c047addf6fc8/public_url"
+  }
+]

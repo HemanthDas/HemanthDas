@@ -1,21 +1,21 @@
+:root {
+  --bgcolor: #0f1624;
+}
 html {
   font-size: 20px;
 }
 body {
-  /* background: url("images/fullbody.jpg") no-repeat; */
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
+  background-color: var(--bgcolor);
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 * {
   max-width: 100%;
   overflow-x: hidden;
 }
-/* Pages css  */
-/* home */
-.home,
 .project,
 .about {
   display: flex;
@@ -23,12 +23,31 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-.home > span {
-  font-size: 2.5rem;
-  font-weight: bold;
-  /* font-family: "Noto Sans", sans-serif; */
-  font-family: "Roboto Mono", monospace;
+/* Pages css  */
+/* home */
+
+.home {
+  font-size: 26px;
   color: white;
+  display: grid;
+  grid-template-columns: 1fr 0.75fr;
+  min-height: 100vh;
+  font-family: "Roboto Mono", monospace;
+  /* font-family: "Noto Sans", sans-serif;  */
+}
+.home > .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+.home>.text>.typed{
+  font-size: 0.8em;
+}
+.home > .svgimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* about */
 .box {
@@ -201,6 +220,13 @@ label {
 @media screen and (max-width: 768px) {
   html {
     font-size: 8px;
+  }
+  .home {
+    font-size: 14px;
+    grid-template-columns: 1fr;
+  }
+  .home > .svgimg {
+    display: none;
   }
   .box {
     font-size: 5px;

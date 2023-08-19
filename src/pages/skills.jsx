@@ -34,7 +34,7 @@ const Skills = () => {
     };
   }, []);
   return (
-    <div className="skills" ref={ref}>
+    <div className="skills" ref={ref} id="skills">
       <label style={{marginBottom:"1em"}}>Technical Skills</label>
       <div className="top">
         <Progress

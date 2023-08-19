@@ -1,7 +1,7 @@
 import Box from "../components/box";
 const Project = () => {
   return (
-    <div className="project">
+    <div className="project" id="project">
       <div className="projectbox">
         <label>Projects</label>
         <Box id={0} />

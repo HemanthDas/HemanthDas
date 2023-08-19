@@ -40,9 +40,13 @@ body {
   justify-content: center;
   flex-direction: column;
   margin: auto;
+  
 }
 .home>.text>.typed{
-  font-size: 0.8em;
+  font-size: 0.9em;
+  color:rgb(194, 194, 194);
+  height: 10em;
+  max-width: 20em;
 }
 .home > .svgimg {
   display: flex;

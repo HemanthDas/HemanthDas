@@ -5,7 +5,7 @@ const Home = () => {
   const typeRef = useRef(null);
   useEffect(() => {
     const typed = new Typed(typeRef.current, {
-      strings: ["Welcome to My Website"],
+      strings: ["Hey this is hemanth das chowdary from kl University, i am a full stack developer"],
       startDelay: 100,
       typeSpeed: 50,
       backSpeed: 50,
@@ -13,7 +13,6 @@ const Home = () => {
       smartBackspace: true,
       loop: false,
       showCursor: true,
-      cursorChar: "!",
     });
     return () => {
       typed.destroy();

@@ -10,7 +10,6 @@ const Navbar = () => {
   const menuRef = useRef(null);
   useEffect(() => {
     const handler = (e) => {
-      console.log(menuRef.current.contains(e.target));
       if (!menuRef.current.contains(e.target)) {
         isClicked(false);
       }

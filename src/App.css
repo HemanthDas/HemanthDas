@@ -258,8 +258,7 @@ label {
     z-index: 1000;
     opacity: 0;
     max-width: 40%;
-    transform: translateX(120px);
-    transition:opacity 0.8s ease-in-out,  transform 0.5s ease-in-out;
+    transition:opacity 0.8s ease-in-out;
     border-radius: 1em 0em 0em 1em;
     background-color: wheat;
   }
@@ -267,7 +266,6 @@ label {
   .resmenu.active {
     display: block;
     opacity: 1;
-    transform: translateY(0);
   }
   .resmenu>ul{
     display: flex;

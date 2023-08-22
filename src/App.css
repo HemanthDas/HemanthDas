@@ -34,7 +34,7 @@ body {
   color: white;
   display: grid;
   grid-template-columns: 1fr 0.75fr;
-  min-height: 100vh;
+  min-height: 90vh;
   font-family: "Roboto Mono", monospace;
   /* font-family: "Noto Sans", sans-serif;  */
 }
@@ -55,13 +55,19 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* project */
+
+/*--------------------------------------- project ------------------------------------------------*/
+
 .card {
-  height: 12em;
+  min-height: 25em;
   box-shadow: 0px 0px 3px 1px rgb(136, 136, 136);
   margin: 2em;
-  background-color: white;
   border-radius: 2em 2em 0.5em 0.5em;
+  background-color: rgb(34, 34,34);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 20em;
 }
 .card > .img {
   width: 20em;
@@ -69,9 +75,8 @@ body {
   overflow: hidden;
 }
 .card > .text {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  
 }
 .projectbox {
   /* background-color: rgba(0, 0, 0, 0.496); */
@@ -89,7 +94,7 @@ a {
   color: black;
   font-family: "Noto Sans", sans-serif;
 }
-/* skills */
+/*----------------------------------------- skills -----------------------------------------*/
 .skills {
   display: flex;
   justify-content: center;
@@ -135,7 +140,7 @@ label {
   font-weight: bold;
   width: 100%;
   text-align: center;
-  font-size: 50px;
+  font-size: 2em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 2px 2px 2px #000000;
 }

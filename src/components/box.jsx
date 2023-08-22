@@ -11,7 +11,12 @@ const Box = (props) => {
     <a href={obj.url}>
       <div className="card">
         <div className="img" style={imageStyle}></div>
-        <div className="text">{obj.title}</div>
+        <div className="text">
+          <label>{obj.title}</label>
+          <p style={{color:"white"}}>
+            {obj.discription}
+          </p>
+        </div>
       </div>
     </a>
   );

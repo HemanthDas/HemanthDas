@@ -3,32 +3,28 @@
     "id": 0,
     "img": "images/todolist.jpg",
     "title": "To Do List",
-    "url": "https://github.com/HemanthDas/All-Projects/tree/main/to-do-list-react"
+    "url": "https://github.com/HemanthDas/All-Projects/tree/main/to-do-list-react",
+    "discription": "This is simple Full stack application using react as front-end and node.js as backend. This is a simple to do list application where you can add your tasks and delete them once you are done with it."
   },
   {
     "id": 1,
     "img": "images/dicegame.jpg",
     "title": "Dice Game",
-    "url": "https://github.com/HemanthDas/All-Projects/tree/main/Roll-Dice-Challenge"
+    "url": "https://github.com/HemanthDas/All-Projects/tree/main/Roll-Dice-Challenge",
+    "discription": "A simple dice game using HTML, CSS and JavaScript.This was my first project using JavaScript."
   },
   {
     "id": 2,
-    "img": "images/simongame.png",
+    "img": "images/ecommerce.jpg",
     "title": "Simon Game",
-    "url": "https://github.com/HemanthDas/All-Projects/tree/main/Simon-Game"
+    "url": "https://github.com/HemanthDas/All-Projects/tree/main/Simon-Game",
+    "discription": "This is my Big Project Done using React.js Framework and JFSD backend. This is a E-commerce website for a clothing store and other accessories."
   },
   {
     "id": 3,
     "img": "images/blog.jpg",
-    "title": "Blog Website",
-    "url": "https://github.com/HemanthDas/All-Projects/tree/main/Dairy-Blog"
-  },
-  {
-    "id": 4,
-    "img": "images/fullbody.jpg"
-  },
-  {
-    "id": 5,
-    "img": "images/dp.jpg"
+    "title": "Blog Site",
+    "url": "https://github.com/HemanthDas/All-Projects/tree/main/Dairy-Blog",
+    "discription": "This is a blog website where the people can share their thoughts and ideas. This is a full stack application using node.js as backend and React as frontend."
   }
 ]

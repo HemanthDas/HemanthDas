@@ -1,14 +1,14 @@
 import "./App.css";
 import Project from "./pages/project";
-import Skills from "./pages/skills";
 import PageRoutes from "./components/routes";
+import Journey from "./pages/journey";
 function App() {
   return (
     <>
       <div>
         <PageRoutes />
         <Project />
-        <Skills />
+        <Journey />
       </div>
     </>
   );

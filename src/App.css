@@ -1,5 +1,6 @@
 :root {
   --bgcolor: #0f1624;
+  --transcolor:rgba(0, 0, 0, 0.619);
 }
 html {
   font-size: 20px;
@@ -20,7 +21,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
-.project,.journey {
+.project {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,52 +97,161 @@ a {
   font-family: "Noto Sans", sans-serif;
 }
 /*----------------------------------------- Journey -----------------------------------------*/
-.journey{
-  font-size: 16px;
+.journey {
+  font-size: 15px;
+  min-height: 100vh;
+  /* background-color: aliceblue; */
+  display: flex;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.full-line {
+  height: 1vh;
   width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sidebar{
-  min-width: 2em;
-  min-height: 70%;
-  background-color: black;
+.full-line::after {
+  content: " ";
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 0.5vh;
+  animation: move 5s linear;
+  box-shadow: 0px 0px 10px 1px black;
+}
+.up-spike,
+.down-spike {
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-evenly;
+  .set{
+    border-radius: 1em;
+  }
+  .item {
+    min-width: 10em;
+    min-height: 3em;
+    background-color: var(--transcolor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius:0px 0px 1em;
+  }
+  .item>label{
+    color: rgb(95, 95, 139);
+  }
+  .item>p{
+    margin: 1em;
+  }
+}
+.up-spike {
+  .set {
+    opacity: 0;
+    animation: anime-up 0.5s ease-in-out forwards;
+    background-color: #0f1624;
+    .tag {
+      width: 100%;
+      height: 1em;
+      background-color: var(--transcolor);
+      position: relative;
+    }
+    .tag::before {
+      content: " ";
+      position: absolute;
+      height: 0.5em;
+      background-color: var(--bgcolor);
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-left: 1px solid var(--transcolor);
+      border-radius: 20em 0px 0px 0px;
+    }
+  }
+  .set:nth-child(1){
+    animation-delay: 100ms;
+  }
+  .set:nth-child(2){
+    animation-delay: 1.3s;
+  }
+  .set:nth-child(3){
+    animation-delay: 2.5s
+  }
+  .set:nth-child(4){
+    animation-delay: 3.8s;
+  }
+}
+.down-spike {
+  .set {
+    color: white;
+    opacity: 0;
+    animation: anime-down 0.5s ease-in-out forwards;
+    background-color: #0f1624;
+    .tag {
+      width: 100%;
+      height: 1em;
+      background-color: var(--transcolor);
+      position: relative;
+    }
+    .tag::before {
+      content: " ";
+      position: absolute;
+      height: 0.5em;
+      background-color: var(--bgcolor);
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0px 0px 20em 0px;
+    }
+  }
+  .set:nth-child(1){
+    animation-delay: 1s;
+  }
+  .set:nth-child(2){
+    animation-delay: 2.5s;
+  }
+  .set:nth-child(3){
+    animation-delay: 4s;
+  }
 }
 /* keyframe */
-/* @keyframes slide {
+@keyframes move {
   0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes anime-up {
+  0%{
     transform: translateY(100px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateY(0);
     opacity: 1;
   }
-} */
-/* componenets css */
-/* .anime {
-  animation: slide 1s ease-in;
 }
-.false {
-  display: none;
-} */
-/* NAVBAR */
-/* keyframe */
-/* @keyframes slide {
-  0% {
-    transform: translateY(100px);
+@keyframes anime-down {
+  0%{
+    transform: translateY(-100px);
     opacity: 0;
   }
-  100% {
+  100%{
     transform: translateY(0);
     opacity: 1;
   }
-} */
-/* componenets css */
-/* .anime {
-  animation: slide 1s ease-in;
 }
-.false {
-  display: none;
-} */
+
 label {
   color: white;
   /* background-color: rgba(0, 0, 0, 0.7); */
@@ -186,6 +296,13 @@ label {
 }
 
 /* media queries */
+@media screen and (max-width:1000px) {
+  .journey{
+    font-size: 8px;
+  }
+}
+  
+}
 @media screen and (max-width: 768px) and (min-width: 600px) {
   .navbar > .inpage .link:nth-last-child(1) {
     display: none;
@@ -254,7 +371,6 @@ label {
     font-size: 2em;
   }
   ul a:nth-last-child(-n + 3) {
-    width: 20px;
     height: 20px;
     display: flex;
     width: 100%;

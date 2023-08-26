@@ -23,16 +23,13 @@ const Navbar = () => {
     <div className="navbody">
       <div className="navbar">
         <div className="inpage">
-          <HashLink className="link" to={"/HemanthDas/"}>
-            Porfolio
+          <HashLink className="link" to={"/HemanthDas/"} >
+            PORTFOLIO
           </HashLink>
-          <HashLink className="link" to={"#skills"}>
-            skills
+          <HashLink className="link" to={"#project"} >
+            Projects
           </HashLink>
-          <HashLink className="link" to={"#project"}>
-            Project
-          </HashLink>
-          <HashLink className="link" to={"#project"}>
+          <HashLink className="link" to={"#about"} >
             About
           </HashLink>
         </div>

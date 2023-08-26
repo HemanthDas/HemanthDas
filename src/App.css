@@ -1,7 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
 :root {
   --bgcolor: #0f1624;
-  --transcolor:rgba(0, 0, 0, 0.619);
+  --transcolor: #000000;
 }
+
 html {
   font-size: 20px;
 }
@@ -13,6 +17,7 @@ body {
   margin: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -40,18 +45,25 @@ body {
   min-height: 95vh;
   font-family: "Roboto Mono", monospace;
   /* font-family: "Noto Sans", sans-serif;  */
+  
 }
 .home > .text {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
   flex-direction: column;
-  margin: auto;
+  margin: 4em;
+  /* margin: auto; */
+  font-family: 'ADLaM Display', cursive;
+  
 }
 .home > .text > .typed {
   font-size: 0.9em;
   color: rgb(194, 194, 194);
   height: 10em;
-  max-width: 23em;
+  max-width: 25em;
+  word-wrap: break-word;
+  font-family: 'Heebo', sans-serif;
 }
 .home > .svgimg {
   display: flex;
@@ -107,6 +119,9 @@ a {
   align-items: center;
   justify-content: center;
 }
+.journey svg{
+  display: none;
+}
 .full-line {
   height: 1vh;
   width: 100%;
@@ -133,8 +148,10 @@ a {
   align-items: center;
   position: relative;
   justify-content: space-evenly;
-  .set{
+  .set {
     border-radius: 1em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
   }
   .item {
     min-width: 10em;
@@ -144,20 +161,21 @@ a {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    border-radius:0px 0px 1em;
+    border-radius: 0px 0px 1em;
   }
-  .item>label{
+  .item > label {
     color: rgb(95, 95, 139);
   }
-  .item>p{
+  .item > p {
     margin: 1em;
+    font-family: "Inconsolata", monospace;
   }
 }
 .up-spike {
   .set {
     opacity: 0;
     animation: anime-up 0.5s ease-in-out forwards;
-    background-color: #0f1624;
+    background-color: var(--bgcolor);
     .tag {
       width: 100%;
       height: 1em;
@@ -176,16 +194,16 @@ a {
       border-radius: 20em 0px 0px 0px;
     }
   }
-  .set:nth-child(1){
+  .set:nth-child(1) {
     animation-delay: 100ms;
   }
-  .set:nth-child(2){
+  .set:nth-child(2) {
     animation-delay: 1.3s;
   }
-  .set:nth-child(3){
-    animation-delay: 2.5s
+  .set:nth-child(3) {
+    animation-delay: 2.5s;
   }
-  .set:nth-child(4){
+  .set:nth-child(4) {
     animation-delay: 3.8s;
   }
 }
@@ -194,7 +212,7 @@ a {
     color: white;
     opacity: 0;
     animation: anime-down 0.5s ease-in-out forwards;
-    background-color: #0f1624;
+    background-color: var(--bgcolor);
     .tag {
       width: 100%;
       height: 1em;
@@ -204,7 +222,6 @@ a {
     .tag::before {
       content: " ";
       position: absolute;
-      height: 0.5em;
       background-color: var(--bgcolor);
       bottom: 0;
       width: 100%;
@@ -212,13 +229,13 @@ a {
       border-radius: 0px 0px 20em 0px;
     }
   }
-  .set:nth-child(1){
+  .set:nth-child(1) {
     animation-delay: 1s;
   }
-  .set:nth-child(2){
+  .set:nth-child(2) {
     animation-delay: 2.5s;
   }
-  .set:nth-child(3){
+  .set:nth-child(3) {
     animation-delay: 4s;
   }
 }
@@ -232,21 +249,21 @@ a {
   }
 }
 @keyframes anime-up {
-  0%{
+  0% {
     transform: translateY(100px);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 @keyframes anime-down {
-  0%{
+  0% {
     transform: translateY(-100px);
     opacity: 0;
   }
-  100%{
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
@@ -281,6 +298,7 @@ label {
   font-family: sans-serif;
   font-weight: bold;
   margin: 1em;
+  font-family: "Phudu", cursive;
 }
 .navbar {
   width: 100%;
@@ -296,12 +314,23 @@ label {
 }
 
 /* media queries */
-@media screen and (max-width:1000px) {
-  .journey{
-    font-size: 8px;
+@media screen and (max-width: 1200px) {
+  .journey {
+    font-size: 12px;
   }
 }
-  
+@media screen and (max-width: 1000px) {
+  .journey {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 820px) {
+  .journey >div:nth-child(-n+3){
+    display: none;
+  }
+  .journey> svg{
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) and (min-width: 600px) {
   .navbar > .inpage .link:nth-last-child(1) {
@@ -352,7 +381,7 @@ label {
     max-width: 40%;
     transition: opacity 0.8s ease-in-out;
     border-radius: 1em 0em 0em 1em;
-    background-color: wheat;
+    background-color: rgb(203, 202, 200);
   }
 
   .resmenu.active {
@@ -370,6 +399,7 @@ label {
     margin: 0.3em;
     font-size: 2em;
   }
+
   ul a:nth-last-child(-n + 3) {
     height: 20px;
     display: flex;

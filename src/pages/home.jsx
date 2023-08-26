@@ -23,7 +23,6 @@ const Home = () => {
       <div className="text">
         <div>
           <h1 style={{marginBottom:"0px"}}>Hello !</h1>
-          <h1 style={{marginTop:"0px"}}>I am Hemanth Das</h1>
         </div>
         <p className="typed">
           <span ref={typeRef}></span>

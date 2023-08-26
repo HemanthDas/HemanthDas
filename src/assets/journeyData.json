@@ -11,27 +11,27 @@
   },
   {
     "id": 3,
-    "txt": "Started My Practising Java",
+    "txt": "Started to learn Full-Stack Web Development",
     "year":"2022"
   },
   {
     "id": 4,
-    "txt": "Started My Practising Java",
-    "year":"2022"
+    "txt": "Completed My AWS Certification",
+    "year":"2023"
   },
   {
     "id": 5,
-    "txt": "Started My Practising Java",
-    "year":"2023"
+    "txt": "Started Practising Problem Solving",
+    "year":"2022"
   },
   {
     "id": 6,
-    "txt": "Started My Practising Java",
-    "year":"2023"
+    "txt": "Created My First Full-Stack Web Application",
+    "year":"2022"
   },
   {
     "id": 7,
-    "txt": "Started My Practising Java",
+    "txt": "Learning Devops Engineering",
     "year":"2023"
   }
 ]

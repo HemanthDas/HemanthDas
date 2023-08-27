@@ -4,13 +4,11 @@ import PageRoutes from "./components/routes";
 import Journey from "./pages/journey";
 function App() {
   return (
-    <>
-      <div>
-        <PageRoutes />
-        <Project />
-        <Journey />
-      </div>
-    </>
+    <div>
+      <PageRoutes />
+      <Project />
+      <Journey />
+    </div>
   );
 }
 

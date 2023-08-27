@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
 :root {
   --bgcolor: #0f1624;
   --transcolor: #000000;
@@ -17,7 +17,6 @@ body {
   margin: 0px;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  
 }
 ::-webkit-scrollbar {
   width: 0px;
@@ -45,17 +44,13 @@ body {
   min-height: 95vh;
   font-family: "Roboto Mono", monospace;
   /* font-family: "Noto Sans", sans-serif;  */
-  
 }
 .home > .text {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
   margin: 4em;
-  /* margin: auto; */
-  font-family: 'ADLaM Display', cursive;
-  
+  font-family: "ADLaM Display", cursive;
 }
 .home > .text > .typed {
   font-size: 0.9em;
@@ -63,7 +58,7 @@ body {
   height: 10em;
   max-width: 25em;
   word-wrap: break-word;
-  font-family: 'Heebo', sans-serif;
+  font-family: "Heebo", sans-serif;
 }
 .home > .svgimg {
   display: flex;
@@ -119,7 +114,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-.journey svg{
+.journey > .containSvg {
   display: none;
 }
 .full-line {
@@ -129,14 +124,11 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.full-line::after {
-  content: " ";
-  position: absolute;
   background-color: white;
-  width: 100%;
-  height: 0.5vh;
-  animation: move 5s linear;
+  transform: translateX(-100%);
+}
+.line-anime {
+  animation: move 5s linear forwards;
   box-shadow: 0px 0px 10px 1px black;
 }
 .up-spike,
@@ -167,14 +159,15 @@ a {
     color: rgb(95, 95, 139);
   }
   .item > p {
-    margin: 1em;
+    margin: 1.5em;
+    font-weight: bold;
     font-family: "Inconsolata", monospace;
   }
 }
 .up-spike {
   .set {
     opacity: 0;
-    animation: anime-up 0.5s ease-in-out forwards;
+    /* animation: anime-up 0.5s ease-in-out forwards; */
     background-color: var(--bgcolor);
     .tag {
       width: 100%;
@@ -211,7 +204,7 @@ a {
   .set {
     color: white;
     opacity: 0;
-    animation: anime-down 0.5s ease-in-out forwards;
+    /* animation: anime-down 0.5s ease-in-out forwards; */
     background-color: var(--bgcolor);
     .tag {
       width: 100%;
@@ -238,6 +231,12 @@ a {
   .set:nth-child(3) {
     animation-delay: 4s;
   }
+}
+.up-ani .set{
+  animation: anime-up 0.5s ease-in-out forwards;
+}
+.down-ani .set{
+  animation: anime-down 0.5s ease-in-out forwards;
 }
 /* keyframe */
 @keyframes move {
@@ -275,7 +274,7 @@ label {
   font-weight: bold;
   width: 100%;
   text-align: center;
-  font-size: 2em;
+  font-size: 3em;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 2px 2px 2px #000000;
 }
@@ -324,14 +323,43 @@ label {
     font-size: 10px;
   }
 }
+/* Media query for screens with a maximum width of 820px */
 @media screen and (max-width: 820px) {
-  .journey >div:nth-child(-n+3){
+  .journey > div:nth-child(-n + 3) {
     display: none;
   }
-  .journey> svg{
+
+  .journey > div:last-child {
     display: block;
+    margin: 3em;
+  }
+  .containSvg svg path {
+    stroke-width: 8;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: drawPath 10s ease-in-out forwards;
+  }
+  .containSvg{
+    position: relative;
+    .set{
+      display: inline-block;
+      background-color: red;
+      position: absolute;
+      top: 0;
+      left: 5em;
+    }
   }
 }
+
+@keyframes drawPath {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media screen and (max-width: 768px) and (min-width: 600px) {
   .navbar > .inpage .link:nth-last-child(1) {
     display: none;

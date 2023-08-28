@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap");
 :root {
   --bgcolor: #0f1624;
-  --transcolor: #000000;
+  --transcolor: rgb(189, 196, 205);
 }
 
 html {
@@ -120,7 +120,6 @@ a {
 .full-line {
   height: 1vh;
   width: 100%;
-  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,6 +158,7 @@ a {
     color: rgb(95, 95, 139);
   }
   .item > p {
+    color: black;
     margin: 1.5em;
     font-weight: bold;
     font-family: "Inconsolata", monospace;
@@ -167,7 +167,6 @@ a {
 .up-spike {
   .set {
     opacity: 0;
-    /* animation: anime-up 0.5s ease-in-out forwards; */
     background-color: var(--bgcolor);
     .tag {
       width: 100%;
@@ -178,7 +177,6 @@ a {
     .tag::before {
       content: " ";
       position: absolute;
-      height: 0.5em;
       background-color: var(--bgcolor);
       bottom: 0;
       width: 100%;
@@ -232,10 +230,10 @@ a {
     animation-delay: 4s;
   }
 }
-.up-ani .set{
+.up-ani .set {
   animation: anime-up 0.5s ease-in-out forwards;
 }
-.down-ani .set{
+.down-ani .set {
   animation: anime-down 0.5s ease-in-out forwards;
 }
 /* keyframe */
@@ -285,6 +283,7 @@ label {
 .navbar {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .navbar > .inpage {
   display: inherit;
@@ -294,14 +293,12 @@ label {
 }
 .inpage > * {
   color: white;
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   font-weight: bold;
   margin: 1em;
   font-family: "Phudu", cursive;
 }
-.navbar {
-  width: 100%;
-}
+
 .navbar > .outpage {
   display: flex;
   width: 100%;
@@ -331,26 +328,107 @@ label {
 
   .journey > div:last-child {
     display: block;
-    margin: 3em;
+    margin: 2em;
   }
   .containSvg svg path {
     stroke-width: 8;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    animation: drawPath 10s ease-in-out forwards;
+    
   }
-  .containSvg{
-    position: relative;
-    .set{
-      display: inline-block;
-      background-color: red;
-      position: absolute;
-      top: 0;
-      left: 5em;
+  .path-anime svg path{
+    animation: drawPath 6s ease-in-out forwards;
+  }
+  .path-anime svg{
+    .divc{
+      .it1,
+      .it2,
+      .it3,
+      .it4,
+      .it5,
+      .it6,
+      .it7 {
+        animation: show 0.5s ease-in-out 4s forwards;
+      }
+    }
+  }
+  .containSvg svg {
+    .divc {
+      position: relative;
+      padding: 5em;
+      .it1,
+      .it2,
+      .it3,
+      .it4,
+      .it5,
+      .it6,
+      .it7 {
+        position: absolute;
+        color: #000000;
+        opacity: 0;
+        .set {
+          border-radius: 1em;
+          .item {
+            background-color: rgb(41, 41, 41);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 0px 0px 1em;
+            
+          }
+          .item > label {
+            display: none;
+          }
+          .item > p {
+            font-size: 1em;
+            color: white;
+            /* font-weight: bold; */
+            margin: 0.5em;
+            max-width: 8em;
+            font-family: "Inconsolata", monospace;
+          }
+        }
+      }
+      .it1 {
+        top: 10px;
+        left: 0;
+      }
+      .it2 {
+        top: 10%;
+        right: 10%;
+      }
+      .it3 {
+        top: 38%;
+        left: 0;
+      }
+      .it4 {
+        top: 62%;
+        right: 40px;
+      }
+      .it5 {
+        bottom: 0;
+        left: 0;
+      }
+      .it6 {
+        bottom: 0;
+        right: 0;
+      }
+      .it7 {
+        top: 38%;
+        right: 0;
+      }
     }
   }
 }
-
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes drawPath {
   0% {
     stroke-dashoffset: 1000;

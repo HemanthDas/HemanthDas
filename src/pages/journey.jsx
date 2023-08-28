@@ -1,8 +1,7 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import jdata from "../assets/journeyData.json";
 import Set from "../components/set";
-import { useState } from "react";
-import { useRef } from "react";
+
 const Journey = () => {
   const data = JSON.parse(JSON.stringify(jdata));
   const [isVisble, setVisble] = useState(false);
@@ -57,7 +56,7 @@ const Journey = () => {
             )
         )}
       </div>
-      <div className="containSvg">
+      <div className={"containSvg " + (isVisble && "path-anime")}>
         <svg
           width="500"
           height="554"
@@ -70,8 +69,35 @@ const Journey = () => {
             stroke="white"
             strokeWidth="8"
           />
+          <foreignObject width="100%" height="100%" className="divc">
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it1">
+              <Set txt={"Started My BTech Course,2021"} />
+            </div>
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it2">
+              <Set txt={"Learned First Programming Language Java"} />
+            </div>
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it3">
+              <Set txt={"Started learning Web Development"} />
+            </div>
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it4">
+              <Set txt={"Created My First Full-Stack Web Application"} />
+            </div>
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it5">
+              <Set txt={"Learning Devops Engineering"} />
+            </div>
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it6">
+              <Set txt={"Completed My AWS Certification"} />
+            </div>
+            <div xmlns="http://www.w3.org/1999/xhtml" className="it7">
+              <Set txt={"Learning Devops Engineering"} />
+            </div>
+            {/* <div xmlns="http://www.w3.org/1999/xhtml" className="line1">
+              <svg width="100%" height="100%">
+                <line x1="0" y1="0" x2="10" y2="10" stroke="white" />
+              </svg>
+            </div> */}
+          </foreignObject>
         </svg>
-        <Set key={1} tag={1} txt={"hello World"} title={"2021"} />
       </div>
     </div>
   );

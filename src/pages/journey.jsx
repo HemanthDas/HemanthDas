@@ -1,12 +1,26 @@
 import { useEffect, useState, useRef } from "react";
 import jdata from "../assets/journeyData.json";
 import Set from "../components/set";
-
+import Typed from "typed.js";
+import github from "../assets/github.svg";
 const Journey = () => {
   const data = JSON.parse(JSON.stringify(jdata));
   const [isVisble, setVisble] = useState(false);
   const pageRef = useRef(null);
+  const tyRef = useRef(null);
   useEffect(() => {
+    const typed = new Typed(tyRef.current, {
+      strings: [
+        "I've started my career in web development and have completed multiple projects using React. Currently, I'm working on two major projects, one for my college and another personal project. You can find these projects on my GitHub profile. I'm fully committed to both web development and DevOps engineering. I'm enthusiastic about learning new technologies and constantly improving myself.",
+      ],
+      startDelay: 100,
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1000,
+      smartBackspace: true,
+      loop: false,
+      showCursor: true,
+    });
     const option = {
       root: null,
       threshold: 0.5,
@@ -21,6 +35,7 @@ const Journey = () => {
       observer.observe(pageRef.current);
     }
     return () => {
+      typed.destroy();
       if (pageRef.current) {
         observer.unobserve(pageRef.current);
       }
@@ -56,10 +71,11 @@ const Journey = () => {
             )
         )}
       </div>
+      {/* this will be seen in phones and tabs */}
       <div className={"containSvg " + (isVisble && "path-anime")}>
         <svg
           width="500"
-          height="554"
+          height="504"
           viewBox="0 0 200 254"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +114,12 @@ const Journey = () => {
             </div> */}
           </foreignObject>
         </svg>
+      </div>
+      <div className="about">
+        <div className="txt">
+          <span ref={tyRef}></span>
+          <img src={github} alt="githubsvg" />
+        </div>
       </div>
     </div>
   );

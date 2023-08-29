@@ -44,16 +44,39 @@ body {
   min-height: 95vh;
   font-family: "Roboto Mono", monospace;
   /* font-family: "Noto Sans", sans-serif;  */
+  position: relative;
+  .scroll-btn{
+    position: absolute;
+    right: 0;
+    bottom: 2em;
+    width: 4em;
+    height: 4em;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
+  }
+  .scroll-btn.clicked{
+    animation: clickAnimation 0.1s ease-out;
+  }
+}
+@keyframes clickAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .home > .text {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 4em;
+  margin: 2em;
   font-family: "ADLaM Display", cursive;
 }
 .home > .text > .typed {
-  font-size: 0.9em;
+  font-size: 1em;
   color: rgb(194, 194, 194);
   height: 10em;
   max-width: 25em;
@@ -325,10 +348,20 @@ label {
   .journey > div:nth-child(-n + 3) {
     display: none;
   }
-
-  .journey > div:last-child {
-    display: block;
+  .journey > div:nth-last-child(-n+2) {
+    
     margin: 2em;
+  }
+  .about{
+    display: flex !important;
+  }
+  .journey>div:nth-last-child(2){
+    display: flex !important;
+    margin-bottom: 0;
+  }
+  .journey>div:nth-last-child(1){
+    display: block;
+    margin-top: 0;
   }
   .containSvg svg path {
     stroke-width: 8;
@@ -419,6 +452,22 @@ label {
         right: 0;
       }
     }
+  }
+}
+.about{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-family: "Heebo", sans-serif;
+  .txt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-size: 1.5em;
+    padding: 1em;
+    /* background-color: rgba(0, 0, 0, 0.451); */
+    border-radius: 2em;
   }
 }
 @keyframes show {

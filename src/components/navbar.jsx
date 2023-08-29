@@ -82,7 +82,7 @@ const Navbar = () => {
                   Project
                 </label>
               </HashLink>
-              <HashLink className="link" to={"#project"}>
+              <HashLink className="link" to={"#about"}>
                 <label
                   style={{
                     fontSize: "0.8em",
@@ -90,7 +90,7 @@ const Navbar = () => {
                     color: "black",
                   }}
                 >
-                  Project
+                  About
                 </label>
               </HashLink>
               <a href="https://www.codechef.com/users/klu2100030195">

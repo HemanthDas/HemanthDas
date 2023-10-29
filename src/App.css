@@ -47,8 +47,8 @@ body {
   position: relative;
   .scroll-btn{
     position: absolute;
-    right: 0;
-    bottom: 2em;
+    right: 2em;
+    bottom: 5em;
     width: 4em;
     height: 4em;
     filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
@@ -302,6 +302,7 @@ label {
 /* NAVBAR */
 .navbody {
   display: flex;
+  margin: 2rem;
 }
 .navbar {
   display: flex;

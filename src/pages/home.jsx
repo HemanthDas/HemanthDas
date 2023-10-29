@@ -33,8 +33,8 @@ const Home = () => {
         </p>
       </div>
       <div className="svgimg">
-        <svg width="400" height="400">
-          <image href={dev} width="400" height="400" />
+        <svg width="500" height="500">
+          <image href={dev}/>
         </svg>
       </div>
       <div

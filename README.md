@@ -19,7 +19,7 @@ Here are a few projects I've worked on:
    
 2. **E-Commerce**
    Description: This is my E-Commerce Website which I built using React and express.js
-   Repository: [Link to GitHub Repo](https://github.com/HemanthDas/e-commerce)
+   Repository: [Link to GitHub Repo](https://github.com/HemanthDas/Full-Stack)
 
 ## Problem Solving
 

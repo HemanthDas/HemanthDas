@@ -2,12 +2,13 @@ import Box from "../components/box";
 const Project = () => {
   return (
     <div className="project" id="project">
+      <label>Projects</label>
       <div className="projectbox">
-        <label>Projects</label>
         <Box id={0} />
         <Box id={1} />
         <Box id={2} />
         <Box id={3} />
+        <Box id={4} />
       </div>
     </div>
   );

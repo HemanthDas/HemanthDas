@@ -25,13 +25,7 @@ body {
   max-width: 100%;
   overflow-x: hidden;
 }
-.project {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  color: white;
-}
+
 /* Pages css  */
 
 /* home */
@@ -45,7 +39,7 @@ body {
   font-family: "Roboto Mono", monospace;
   /* font-family: "Noto Sans", sans-serif;  */
   position: relative;
-  .scroll-btn{
+  .scroll-btn {
     position: absolute;
     right: 2em;
     bottom: 5em;
@@ -53,7 +47,7 @@ body {
     height: 4em;
     filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
   }
-  .scroll-btn.clicked{
+  .scroll-btn.clicked {
     animation: clickAnimation 0.1s ease-out;
   }
 }
@@ -90,36 +84,53 @@ body {
 }
 
 /*--------------------------------------- project ------------------------------------------------*/
-
-.card {
-  min-height: 25em;
-  box-shadow: 0px 0px 3px 1px rgb(136, 136, 136);
-  margin: 2em;
-  border-radius: 2em 2em 0.5em 0.5em;
-  background-color: rgb(34, 34, 34);
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  max-width: 20em;
-}
-.card > .img {
-  width: 20em;
-  height: 10em;
-  overflow: hidden;
-}
-.card > .text {
+.project {
   text-align: center;
+  width: 100%;
 }
-.projectbox {
-  /* background-color: rgba(0, 0, 0, 0.496); */
+.projectbox{
   display: flex;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+}
+.card {
+  margin: 1em;
+  background-color: black;
+  position: relative;
+  width: 50vmin;
+  min-width: 250px;
+  min-height: 250px;
+  display: flex;
+  align-items: end;
+  overflow: hidden;
+  border-radius: 10px;
+  .img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 0px;
+    position: absolute;
+    transition: height 0.5s;
+    > label {
+      font-size: 1.2em;
+      font-family: "Heebo", sans-serif;
+      margin: 0.5em;
+    }
+  }
 }
 .card:hover {
-  transform: scale(1.1);
-  transition: 0.5s ease-in-out;
+  .img {
+    filter: blur(5px);
+  }
+  .text {
+    height: 100%;
+  }
 }
 a {
   text-decoration: none;
@@ -349,18 +360,17 @@ label {
   .journey > div:nth-child(-n + 3) {
     display: none;
   }
-  .journey > div:nth-last-child(-n+2) {
-    
+  .journey > div:nth-last-child(-n + 2) {
     margin: 2em;
   }
-  .about{
+  .about {
     display: flex !important;
   }
-  .journey>div:nth-last-child(2){
+  .journey > div:nth-last-child(2) {
     display: flex !important;
     margin-bottom: 0;
   }
-  .journey>div:nth-last-child(1){
+  .journey > div:nth-last-child(1) {
     display: block;
     margin-top: 0;
   }
@@ -368,13 +378,12 @@ label {
     stroke-width: 8;
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    
   }
-  .path-anime svg path{
+  .path-anime svg path {
     animation: drawPath 6s ease-in-out forwards;
   }
-  .path-anime svg{
-    .divc{
+  .path-anime svg {
+    .divc {
       .it1,
       .it2,
       .it3,
@@ -409,7 +418,6 @@ label {
             align-items: center;
             flex-direction: column;
             border-radius: 0px 0px 1em;
-            
           }
           .item > label {
             display: none;
@@ -455,12 +463,12 @@ label {
     }
   }
 }
-.about{
+.about {
   width: 100%;
   display: flex;
   justify-content: center;
   font-family: "Heebo", sans-serif;
-  .txt{
+  .txt {
     display: flex;
     justify-content: center;
     align-items: center;

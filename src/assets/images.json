@@ -18,7 +18,7 @@
     "img": "images/ecommerce.jpg",
     "title": "Simon Game",
     "url": "https://github.com/HemanthDas/All-Projects/tree/main/Simon-Game",
-    "discription": "This is my Big Project Done using React.js Framework and JFSD backend. This is a E-commerce website for a clothing store and other accessories."
+    "discription": "This is a game where you have to remember the sequence of the colors and click on them. This is a simple game using HTML, CSS and JavaScript."
   },
   {
     "id": 3,

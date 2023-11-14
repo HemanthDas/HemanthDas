@@ -4,7 +4,7 @@ import PageRoutes from "./components/routes";
 import Journey from "./pages/journey";
 function App() {
   return (
-    <div>
+    <div className="whole">
       <PageRoutes />
       <Project />
       <Journey />

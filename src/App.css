@@ -39,27 +39,29 @@ body {
   font-family: "Roboto Mono", monospace;
   /* font-family: "Noto Sans", sans-serif;  */
   position: relative;
-  .scroll-btn {
-    position: absolute;
-    right: 2em;
-    bottom: 5em;
-    width: 4em;
-    height: 4em;
-    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.5));
-  }
-  .scroll-btn.clicked {
-    animation: clickAnimation 0.1s ease-out;
+
+  @keyframes clickAnimation {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.8);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
-@keyframes clickAnimation {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.8);
-  }
-  100% {
-    transform: scale(1);
+.whole{
+  position: relative;
+}
+.scroll-btn {
+  position: absolute;
+  top: 0;
+  #btn{
+    position: fixed;
+    bottom: 0;
+    right: 0;
   }
 }
 .home > .text {
@@ -88,7 +90,7 @@ body {
   text-align: center;
   width: 100%;
 }
-.projectbox{
+.projectbox {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;

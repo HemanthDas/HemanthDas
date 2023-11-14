@@ -1,7 +1,6 @@
 import Typed from "typed.js";
 import dev from "../assets/dev.svg";
-import ic1 from "../assets/up90.png";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect } from "react";
 const Home = () => {
   const typeRef = useRef(null);
   useEffect(() => {
@@ -21,7 +20,6 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
-  const [isclicked, setClicked] = useState(false);
   return (
     <div className="home">
       <div className="text">
@@ -34,24 +32,9 @@ const Home = () => {
       </div>
       <div className="svgimg">
         <svg width="500" height="500">
-          <image href={dev}/>
+          <image href={dev} />
         </svg>
       </div>
-      <div
-        className={"scroll-btn " + (isclicked && "clicked")}
-        style={{
-          background: `url(${ic1})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-        }}
-        onClick={() => {
-          setClicked(true);
-          setTimeout(() => {
-            window.scrollTo({ top: 800, behavior: "smooth" });
-            setClicked(false);
-          }, 100);
-        }}
-      ></div>
     </div>
   );
 };

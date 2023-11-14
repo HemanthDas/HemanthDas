@@ -1,26 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import jdata from "../assets/journeyData.json";
 import Set from "../components/set";
-import Typed from "typed.js";
-import github from "../assets/github.svg";
 const Journey = () => {
   const data = JSON.parse(JSON.stringify(jdata));
   const [isVisble, setVisble] = useState(false);
   const pageRef = useRef(null);
-  const tyRef = useRef(null);
   useEffect(() => {
-    const typed = new Typed(tyRef.current, {
-      strings: [
-        "I've started my career in web development and have completed multiple projects using React. Currently, I'm working on two major projects, one for my college and another personal project. You can find these projects on my GitHub profile. I'm fully committed to both web development and DevOps engineering. I'm enthusiastic about learning new technologies and constantly improving myself.",
-      ],
-      startDelay: 100,
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 1000,
-      smartBackspace: true,
-      loop: false,
-      showCursor: true,
-    });
     const option = {
       root: null,
       threshold: 0.5,
@@ -35,7 +20,6 @@ const Journey = () => {
       observer.observe(pageRef.current);
     }
     return () => {
-      typed.destroy();
       if (pageRef.current) {
         observer.unobserve(pageRef.current);
       }
@@ -107,18 +91,17 @@ const Journey = () => {
             <div xmlns="http://www.w3.org/1999/xhtml" className="it7">
               <Set txt={"Learning Devops Engineering"} />
             </div>
-            {/* <div xmlns="http://www.w3.org/1999/xhtml" className="line1">
-              <svg width="100%" height="100%">
-                <line x1="0" y1="0" x2="10" y2="10" stroke="white" />
-              </svg>
-            </div> */}
           </foreignObject>
         </svg>
       </div>
       <div className="about">
         <div className="txt">
-          <span ref={tyRef}></span>
-          <img src={github} alt="githubsvg" />
+          I&apos;ve started my career in web development and have completed
+          multiple projects using React. Currently, I&apos;m working on two
+          major projects, one for my college and another personal project. You
+          can find these projects on my GitHub profile. I&apos;m fully committed
+          to both web development and DevOps engineering. I&apos;m enthusiastic
+          about learning new technologies and constantly improving myself.
         </div>
       </div>
     </div>

@@ -55,7 +55,6 @@ const Journey = () => {
             )
         )}
       </div>
-      {/* this will be seen in phones and tabs */}
       <div className={"containSvg " + (isVisble && "path-anime")}>
         <svg
           width="500"
@@ -93,16 +92,6 @@ const Journey = () => {
             </div>
           </foreignObject>
         </svg>
-      </div>
-      <div className="about">
-        <div className="txt">
-          I&apos;ve started my career in web development and have completed
-          multiple projects using React. Currently, I&apos;m working on two
-          major projects, one for my college and another personal project. You
-          can find these projects on my GitHub profile. I&apos;m fully committed
-          to both web development and DevOps engineering. I&apos;m enthusiastic
-          about learning new technologies and constantly improving myself.
-        </div>
       </div>
     </div>
   );

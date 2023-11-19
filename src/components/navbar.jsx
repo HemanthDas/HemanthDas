@@ -1,7 +1,7 @@
 import codechef from "../assets/codechef.svg";
 import hackerrank from "../assets/hackerrank.png";
 import leetcode from "../assets/leetcode.png";
-import PhoneNavbar from "./phoneNavbar";
+import PhoneNavbar from "./phonenavbar";
 const Navbar = () => {
   return (
     <div className="navbody">

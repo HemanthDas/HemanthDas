@@ -15,7 +15,7 @@ const Navbar = () => {
         <a className="link" href={"#project"}>
           Projects
         </a>
-        <a className="link" href={"#project"}>
+        <a className="link" href={"#skill"}>
           Skills
         </a>
         <a href="https://www.codechef.com/users/klu2100030195">

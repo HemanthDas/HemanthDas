@@ -3,6 +3,7 @@ import Project from "./pages/project";
 import PageRoutes from "./components/routes";
 import Journey from "./pages/journey";
 import AnimatedCursor from "react-animated-cursor";
+import Skills from "./pages/skills";
 function App() {
   return (
     <div className="whole">
@@ -30,6 +31,7 @@ function App() {
       <PageRoutes />
       <Journey />
       <Project />
+      <Skills />
     </div>
   );
 }

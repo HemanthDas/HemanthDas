@@ -5,7 +5,7 @@ import Journey from "./pages/journey";
 import Skills from "./pages/skills";
 function App() {
   return (
-    <div className="whole">
+    <div className="whole" id="page2">
       <PageRoutes />
       <Journey />
       <Project />

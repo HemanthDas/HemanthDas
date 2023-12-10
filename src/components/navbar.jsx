@@ -1,8 +1,26 @@
+import { useEffect } from "react";
 import codechef from "../assets/codechef.svg";
 import hackerrank from "../assets/hackerrank.png";
 import leetcode from "../assets/leetcode.png";
 import PhoneNavbar from "./phonenavbar";
 const Navbar = () => {
+  useEffect(() => {
+    const navbody = document.querySelector(".navbody");
+    const scrollCallBack = () => {
+      if (window.pageYOffset > 0) {
+        navbody.classList.add("sticky");
+      } else {
+        navbody.classList.remove("sticky");
+      }
+    };
+
+    window.addEventListener("scroll", scrollCallBack);
+
+    return () => {
+      window.removeEventListener("scroll", scrollCallBack);
+    };
+  }, []);
+
   return (
     <div className="navbody">
       <div className="navbar">
@@ -32,5 +50,4 @@ const Navbar = () => {
     </div>
   );
 };
-
 export default Navbar;

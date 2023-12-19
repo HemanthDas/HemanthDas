@@ -9,6 +9,9 @@ I'm a 3rd-year B.Tech Computer Science student at KL University. I'm passionate 
 - 🧠 **Problem Solving:** I love solving problems, and I often practice my problem-solving skills using Java.
 - 📫 **Contact:** Feel free to reach out to me via email at hemanthchoudary4@email.com.
 
+## Github Stats
+<img src="https://github-readme-stats.vercel.app/api?username=HemanthDas&show_icons=true&theme=dark"/>
+
 ## Projects
 
 Here are a few projects I've worked on:

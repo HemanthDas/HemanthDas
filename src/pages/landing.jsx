@@ -4,7 +4,7 @@ import man from "../assets/Man_Waving_Hand_Cartoon_Vector.svg";
 import Typed from "typed.js";
 const LandingPage = () => {
   const [isAnimated, setAnimated] = useState(
-    localStorage.getItem("animationPlayed") === "true"
+    window.sessionStorage.getItem("animationPlayed") === "true"
   );
   useEffect(() => {
     const labels = document.querySelectorAll("#logo path");
@@ -113,13 +113,13 @@ const LandingPage = () => {
         p1.classList.add("dont-show");
       }, 1000);
     }
-    setAnimated(localStorage.getItem("animationPlayed") === "true");
+    setAnimated(window.sessionStorage.getItem("animationPlayed") === "true");
     if (!isAnimated) {
       console.log("seriously");
       p1.classList.remove("dont-show");
       setAnimated(true);
       startAnimation();
-      localStorage.setItem("animationPlayed", "true");
+      window.sessionStorage.setItem("animationPlayed", "true");
     } else {
       p1.classList.add("dont-show");
       p2.style.display = "block";

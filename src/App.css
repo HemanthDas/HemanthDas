@@ -7,6 +7,7 @@
 }
 #container {
   position: absolute;
+  width: 100%;
   z-index: 3;
 }
 nav {
@@ -37,4 +38,19 @@ nav a.item::after {
 }
 nav a.item:hover::after {
   transform: scaleX(1);
+}
+#main {
+  height: 100vh;
+}
+#about {
+  height: 100vh;
+}
+#project {
+  height: 100vh;
+}
+#achievements {
+  height: 100vh;
+}
+#contact {
+  height: 100vh;
 }

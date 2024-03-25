@@ -7,13 +7,15 @@ import Project from "./pages/project.jsx";
 import About from "./pages/about.jsx";
 import Contact from "./pages/contact.jsx";
 import Achievements from "./pages/achievements.jsx";
+import Animation from "./components/animation.jsx";
 function App() {
   const [isAnimated, setIsAnimated] = useState(false);
   setTimeout(() => {
+    document.documentElement.style.overflow = "auto";
     setIsAnimated(true);
-  }, 10000);
+  }, 8000);
   return (
-    <>
+    <div id="full-body">
       <div id="background">
         <div id="starts"></div>
         <div id="starts2"></div>
@@ -29,9 +31,9 @@ function App() {
           <Contact />
         </div>
       ) : (
-        <>Animation started</>
+        <Animation />
       )}
-    </>
+    </div>
   );
 }
 

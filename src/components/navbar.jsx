@@ -1,11 +1,9 @@
 const Navbar = () => {
+
   return (
-    <nav>
+    <nav className="animate">
       <a className="item" href="#main">
         Home
-      </a>
-      <a className="item" href="#about">
-        About
       </a>
       <a className="item" href="#project">
         Projects

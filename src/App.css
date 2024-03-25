@@ -18,6 +18,7 @@ nav {
   justify-content: end;
   flex-direction: row;
   align-items: center;
+  animation: moveUp 500ms ease-in;
 }
 nav a.item {
   color: white;
@@ -53,4 +54,22 @@ nav a.item:hover::after {
 }
 #contact {
   height: 100vh;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
 }

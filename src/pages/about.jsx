@@ -17,13 +17,13 @@ const About = () => {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5, rootMargin: "0px 0px -100px 0px" }
     );
     observer.observe(about_ref.current);
   }, []);
   return (
     <div id="about" ref={about_ref}>
-      <p>
+      <p className="about-txt">
         {" "}
         Hey! I&apos;m a{" "}
         <p className={"underline-p " + (isVisible && "start")}>

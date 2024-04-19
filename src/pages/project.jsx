@@ -2,10 +2,10 @@ import Card from "../components/card";
 const Project = () => {
   const obj = [
     {
-      title: "Project 1",
+      title: "Quiz Application",
       description: "This is a project",
       stacks: ["HTML", "CSS", "JS"],
-      link: "https:github.com/username/project1",
+      link: "https://github.com/HemanthDas/Quiz-Application",
     },
     {
       title: "Project 2",

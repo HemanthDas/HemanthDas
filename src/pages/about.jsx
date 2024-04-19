@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import AboutCard from "../components/aboutCard";
 
 const About = () => {
   const about_ref = useRef(null);
@@ -9,10 +10,8 @@ const About = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setIsVisible(true);
-            console.log("yes");
             entry.target.classList.add("about-appear");
           } else {
-            console.log("no");
             entry.target.classList.remove("about-appear");
           }
         });
@@ -21,24 +20,29 @@ const About = () => {
     );
     observer.observe(about_ref.current);
   }, []);
+  const aboutcard_data = [
+    {
+      small_title: "Web-Dev",
+      main_title: "Web Development",
+      details: [
+        {
+          title: "Frontend Development:",
+          points: [
+            "Proficient in HTML5, CSS3, and JavaScript for building interactive and responsive user interfaces.",
+            "Experienced in leveraging frontend frameworks such as React.js for building dynamic single-page applications (SPAs).",
+            "Skilled in using Bootstrap and Tailwind CSS for rapid prototyping and creating visually appealing designs.",
+          ],
+        },
+      ],
+    },
+  ];
   return (
     <div id="about" ref={about_ref}>
-      <p className="about-txt">
-        {" "}
-        Hey! I&apos;m a{" "}
-        <p className={"underline-p " + (isVisible && "start")}>
-          full stack developer
-        </p>{" "}
-        and{" "}
-        <p className={"underline-p " + (isVisible && "start")}>
-          devops engineer
-        </p>
-        . I have experience with a variety of technologies and tools, including
-        JavaScript, Python, React, Node.js, Express, Docker, Kubernetes,
-        Jenkins, and more. I&apos;m passionate about learning new things and
-        solving problems. I&apos;m always looking for new opportunities to grow
-        and improve. Let&apos;s connect!
-      </p>
+      <div className="card-grid">
+        {aboutcard_data.map((carddata, index) => {
+          return <AboutCard carddata={carddata} key={index + 1} />;
+        })}
+      </div>
       <div className="about-btns">
         <a
           href="https://www.linkedin.com/in/hemantdas9/"

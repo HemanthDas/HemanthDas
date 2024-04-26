@@ -1,19 +1,26 @@
 const Navbar = () => {
-
+  const handleClick = (href) => {
+    return (e) => {
+      e.preventDefault();
+      document.getElementById(href).scrollIntoView({
+        behavior: "smooth",
+      });
+    };
+  };
   return (
     <nav className="animate">
-      <a className="item" href="#main">
+      <button className="item" onClick={handleClick("main")}>
         Home
-      </a>
-      <a className="item" href="#project">
+      </button>
+      <button className="item" onClick={handleClick("project")}>
         Projects
-      </a>
-      <a className="item" href="#achievements">
+      </button>
+      <button className="item" onClick={handleClick("#achievements")}>
         Achievements
-      </a>
-      <a className="item" href="#contact">
+      </button>
+      <button className="item" onClick={handleClick("#contact")}>
         Contact
-      </a>
+      </button>
     </nav>
   );
 };

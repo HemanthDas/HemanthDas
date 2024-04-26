@@ -164,7 +164,13 @@
   justify-content: center;
   text-align: start;
 }
-
+.card-t1,
+.card-t2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-style: normal;
+}
 .expand {
   display: none;
   opacity: 0;
@@ -187,9 +193,18 @@
   display: flex;
   animation: showDetails 0.8s linear forwards;
 }
+.expand__content {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+  overflow: auto;
+  .item {
+    margin: 10px;
+  }
+}
 ul {
   list-style: outside;
-
+  list-style-type: none;
   > li {
     margin: 10px;
   }

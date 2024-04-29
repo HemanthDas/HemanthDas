@@ -3,8 +3,9 @@ const Project = () => {
   const obj = [
     {
       title: "Quiz Application",
-      description: "This is a project",
-      stacks: ["HTML", "CSS", "JS"],
+      description:
+        "React Quiz Application with Express.js backend. This application is a quiz application where users can take quizzes on various topics. The application has a user authentication system and a leaderboard to show the top scorers. The application is built using React.js, Express.js, and MongoDB.",
+      stacks: ["React", "Express.js", "MongoDB"],
       link: "https://github.com/HemanthDas/Quiz-Application",
     },
     {

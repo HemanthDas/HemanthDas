@@ -15,10 +15,10 @@ const Navbar = () => {
       <button className="item" onClick={handleClick("project")}>
         Projects
       </button>
-      <button className="item" onClick={handleClick("#achievements")}>
+      <button className="item" onClick={handleClick("achievements")}>
         Achievements
       </button>
-      <button className="item" onClick={handleClick("#contact")}>
+      <button className="item" onClick={handleClick("contact")}>
         Contact
       </button>
     </nav>

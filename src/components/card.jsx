@@ -8,6 +8,7 @@ const Card = ({ obj }) => {
           <h2>{obj.title}</h2>
         </div>
         <div className="card-back">
+          <h2>{obj.title}</h2>
           <p className="card-back-description">{obj.description}</p>
           <p className="card-back-tech-title">Technologies:</p>
           <ul className="card-back-tech">

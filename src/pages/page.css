@@ -164,13 +164,7 @@
   justify-content: center;
   text-align: start;
 }
-.card-t1,
-.card-t2 {
-  font-family: "Bebas Neue", sans-serif;
-  font-weight: 500;
-  letter-spacing: 3px;
-  font-style: normal;
-}
+
 .expand {
   display: none;
   opacity: 0;
@@ -210,13 +204,40 @@ ul {
   }
 }
 @keyframes showDetails {
-  0% {
-    opacity: 0;
-  }
+  0%,
   50% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
+}
+.card-front,
+.card-t1,
+.card-t2,
+.card-back-tech-title {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-style: normal;
+}
+.card-back {
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding: 5%;
+}
+.card-back-tech {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card-back-description {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 350;
+  font-style: normal;
 }

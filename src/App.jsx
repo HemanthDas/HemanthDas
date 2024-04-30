@@ -1,17 +1,27 @@
 import "./App.css";
-import Project from "./pages/project";
-import Navbar from "./components/navbar";
-import Journey from "./pages/journey";
-import Skills from "./pages/skills";
-import Home from "./pages/home";
+import "./pages/page.css";
+import Navbar from "./components/navbar.jsx";
+import Home from "./pages/home.jsx";
+import Project from "./pages/project.jsx";
+import About from "./pages/about.jsx";
+import Contact from "./pages/contact.jsx";
+import Achievements from "./pages/achievements.jsx";
 function App() {
   return (
-    <div className="whole" id="page2">
-      <Navbar />
-      <Home />
-      <Journey />
-      <Project />
-      <Skills />
+    <div id="full-body">
+      <div id="background">
+        <div id="starts"></div>
+        <div id="starts2"></div>
+        <div id="starts3"></div>
+      </div>
+      <div id="container">
+        <Navbar />
+        <Home />
+        <About />
+        <Project />
+        <Achievements />
+        <Contact />
+      </div>
     </div>
   );
 }

@@ -10,13 +10,15 @@ const Card = ({ obj }) => {
         <div className="card-back">
           <h2>{obj.title}</h2>
           <p className="card-back-description">{obj.description}</p>
-          <p className="card-back-tech-title">Technologies:</p>
-          <ul className="card-back-tech">
-            {obj.stacks.map((stack, index) => {
-              return <li key={index}>{stack}</li>;
-            })}
-          </ul>
-          <a href={obj.link}>Github</a>
+          <a
+            href={obj.link}
+            target="_blank"
+            rel="noreferrer"
+            className="git-link main-nav-btn about-btn"
+          >
+            <p></p>
+            View Project
+          </a>
         </div>
       </div>
     </div>

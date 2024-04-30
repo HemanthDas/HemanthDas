@@ -3,9 +3,16 @@ const Home = () => {
     <div id="main">
       <div className="main-img"></div>
       <div className="main-txt">Full Stack Developer & DevOps Engineer</div>
-      <a href="#about" className="main-nav-btn">
+      <button
+        className="about-btn main-nav-btn"
+        onClick={() => {
+          document
+            .getElementById("about")
+            .scrollIntoView({ behavior: "smooth" });
+        }}
+      >
         Learn More {">"}
-      </a>
+      </button>
     </div>
   );
 };

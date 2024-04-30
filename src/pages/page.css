@@ -40,6 +40,11 @@
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  .main-nav-btn {
+    font-size: calc(1rem + 1vmin);
+    outline: none;
+    border: none;
+  }
 }
 .main-img,
 .main-nav-btn,
@@ -214,8 +219,7 @@ ul {
 }
 .card-front,
 .card-t1,
-.card-t2,
-.card-back-tech-title {
+.card-t2 {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 500;
   letter-spacing: 3px;
@@ -229,15 +233,34 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: start;
+  align-items: center;
   padding: 5%;
 }
-.card-back-tech {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+
 .card-back-description {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 350;
+  font-weight: 300;
+  font-size: 1.3rem;
   font-style: normal;
+  text-align: start;
+  padding-top: 10%;
+}
+.git-link {
+  display: flex;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 18px;
+  > p {
+    padding: 10%;
+    background-image: url("/github-mark-white.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    margin: 5px;
+  }
+}
+.git-link:hover p {
+  background-image: url("/github-mark.svg");
 }

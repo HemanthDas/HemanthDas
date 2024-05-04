@@ -264,3 +264,17 @@ ul {
 .git-link:hover p {
   background-image: url("/github-mark.svg");
 }
+@media screen and (max-width: 768px) {
+  .card-grid {
+    flex-direction: column;
+    overflow: overlay;
+  }
+  .aboutcard {
+    border-width: 0px 0px 1px 0px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    .card-t2{
+      text-align: center;
+    }
+  }
+}

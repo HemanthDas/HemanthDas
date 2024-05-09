@@ -19,6 +19,7 @@ nav {
   flex-direction: row;
   align-items: center;
   animation: moveUp 500ms ease-in;
+  z-index: 300;
 }
 nav button.item {
   color: white;

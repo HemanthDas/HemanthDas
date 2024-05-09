@@ -18,7 +18,12 @@ const Navbar = () => {
       <button className="item" onClick={handleClick("achievements")}>
         Achievements
       </button>
-      <button className="item" onClick={handleClick("contact")}>
+      <button
+        className="item"
+        onClick={() => {
+          document.getElementById("contact").style.display = "block";
+        }}
+      >
         Contact
       </button>
     </nav>

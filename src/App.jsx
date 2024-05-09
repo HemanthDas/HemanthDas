@@ -15,12 +15,14 @@ function App() {
         <div id="starts3"></div>
       </div>
       <div id="container">
-        <Navbar />
-        <Home />
-        <About />
-        <Project />
-        <Achievements />
-        <Contact />
+
+          <Navbar />
+          <Home />
+          <About />
+          <Project />
+          <Achievements />
+          <Contact />
+
       </div>
     </div>
   );

@@ -29,7 +29,7 @@
       margin: 1rem;
     }
     > input {
-      width: 50vmax;
+      width: 40vmax;
       height: 2rem;
       font-size: 1rem;
       margin: 0.5rem;
@@ -39,7 +39,7 @@
       border: none;
     }
     > div {
-      width: 50vmax;
+      width: 40vmax;
       height: 2rem;
       > select {
         width: 100%;

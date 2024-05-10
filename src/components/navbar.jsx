@@ -48,6 +48,7 @@ const Navbar = () => {
           className="item"
           onClick={() => {
             document.getElementById("contact").classList.toggle("show");
+            document.querySelector(".nav-toggle").classList.toggle("active");
           }}
         >
           Contact

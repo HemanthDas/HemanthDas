@@ -99,7 +99,9 @@ nav button.item:hover::after {
 #achievements {
   min-height: 100vh;
 }
-
+.responsive-nav {
+  display: none;
+}
 @keyframes moveUp {
   0% {
     transform: translateY(100%);
@@ -114,4 +116,49 @@ nav button.item:hover::after {
   nav {
     display: none;
   }
+  .responsive-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: fixed;
+    top: 30px;
+    right: -130px;
+    width: fit-content;
+    transition: all 0.5s ease-in-out;
+    background-color: #0e171cbb;
+    z-index: 300;
+
+  }
+  .nav-toggle {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #0e171cbb;
+    color: white;
+    z-index: 300;
+    width: 30px;
+    border: 1px solid white;
+  }
+  .nav-toggle::after {
+    content: "";
+    position: absolute;
+    border: 1px solid white;
+    width: 20px;
+    top: 5px;
+    right: -10px;
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  .nav-toggle::before {
+    content: "";
+    position: absolute;
+    border: 1px solid white;
+    width: 30px;
+    top: 10px;
+    right: -16px;
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  .nav-toggle.active ~ .responsive-nav {
+    right: 0;
+  }
+
 }

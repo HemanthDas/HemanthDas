@@ -37,13 +37,14 @@ const Contact = () => {
   }
   return (
     <div id="contact">
-      <p
+      <button
         onClick={() => {
           document.getElementById("contact").style.display = "none";
         }}
+        onKeyDown={() => {}}
       >
         X
-      </p>
+      </button>
       <form onSubmit={handleSubmit}>
         <input
           type="text"

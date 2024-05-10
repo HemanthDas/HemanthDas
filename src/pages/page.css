@@ -29,7 +29,8 @@
   height: 50vmin;
   border-radius: 50%;
   overflow: hidden;
-  background: url("/IMG_8447.png");
+  background: url("/image.png");
+  background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.652);
 }

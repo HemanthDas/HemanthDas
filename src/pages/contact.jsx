@@ -39,7 +39,7 @@ const Contact = () => {
     <div id="contact">
       <button
         onClick={() => {
-          document.getElementById("contact").style.display = "none";
+          document.getElementById("contact").classList.toggle("show");
         }}
         onKeyDown={() => {}}
       >
@@ -84,7 +84,7 @@ const Contact = () => {
             required
           ></textarea>
         </div>
-        <input type="submit" value="Submit"></input>
+        <input type="submit" value="Submit" className="contact-submit"></input>
       </form>
     </div>
   );

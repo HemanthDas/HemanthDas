@@ -22,18 +22,18 @@ const Navbar = () => {
         <button
           className="item"
           onClick={() => {
-            document.getElementById("contact").style.display = "block";
+            document.getElementById("contact").classList.toggle("show");
           }}
         >
           Contact
         </button>
       </nav>
-      <div
+      <button
         className="nav-toggle"
         onClick={() => {
           document.querySelector(".nav-toggle").classList.toggle("active");
         }}
-      ></div>
+      ></button>
       <nav className="responsive-nav">
         <button className="item" onClick={handleClick("main")}>
           Home
@@ -47,7 +47,7 @@ const Navbar = () => {
         <button
           className="item"
           onClick={() => {
-            document.getElementById("contact").style.display = "block";
+            document.getElementById("contact").classList.toggle("show");
           }}
         >
           Contact

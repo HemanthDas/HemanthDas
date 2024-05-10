@@ -8,12 +8,17 @@
   background-color: rgba(0, 0, 0, 0.7);
   width: 80vw;
   height: 80vh;
-    >p{
-        position: absolute;
-        top: 0;
-        right: 0;
-        cursor: pointer;
-    }
+  > button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 1.3rem;
+    color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+  }
   > form {
     height: 100%;
     display: flex;
@@ -24,7 +29,7 @@
       margin: 1rem;
     }
     > input {
-      width: 50%;
+      width: 50vmax;
       height: 2rem;
       font-size: 1rem;
       margin: 0.5rem;
@@ -34,7 +39,7 @@
       border: none;
     }
     > div {
-      width: 50%;
+      width: 50vmax;
       height: 2rem;
       > select {
         width: 100%;
@@ -54,9 +59,21 @@
         outline: none;
         border: none;
       }
-      > input:last-child {
-        color: rgb(0, 0, 0);
-      }
+    }
+    .contact-submit {
+      width: 50%;
+      font-size: 1rem;
+      padding: 0.5rem;
+      border-radius: 0.5rem;
+      outline: none;
+      border: none;
+      background-color: #f9b234;
+      color: black;
+      cursor: pointer;
     }
   }
+}
+
+.show {
+  display: block !important;
 }

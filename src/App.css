@@ -160,5 +160,4 @@ nav button.item:hover::after {
   .nav-toggle.active ~ .responsive-nav {
     right: 0;
   }
-
 }
